@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Luas Lingkaran</title>
+  <script>
+    // Fungsi untuk menghitung luas lingkaran
+    function hitungLuasLingkaran() {
+      // Ambil nilai jari-jari dari input
+      const jariJari = parseFloat(document.getElementById("jari-jari").value);
+
+      // Validasi input
+      if (isNaN(jariJari) || jariJari <= 0) {
+        alert("Masukkan nilai jari-jari yang valid!");
+        return;
+      }
+
+      // Hitung luas lingkaran
+      const luas = Math.PI * jariJari * jariJari;
+
+      // Tampilkan hasil
+      document.getElementById("hasil").innerText = `Luas Lingkaran: ${luas.toFixed(2)} cm²`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Hitung Luas Lingkaran</h1>
+  <label for="jari-jari">Masukkan Jari-jari (cm):</label>
+  <input type="number" id="jari-jari" placeholder="Contoh: 5">
+  <button onclick="hitungLuasLingkaran()">Hitung</button>
+  <p id="hasil"></p>
+</body>
+</html>
