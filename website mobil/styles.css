@@ -1,0 +1,157 @@
+/* General Reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+/* Navigation Styling */
+header {
+    background-image:url(2.jpg);
+    background-size:cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Styling for the logo */
+.logo img {
+    width: 150px;  /* Tentukan lebar logo (sesuaikan dengan ukuran logo Anda) */
+    height: 150px; /* Tentukan tinggi logo yang sama dengan lebar untuk membuatnya berbentuk lingkaran */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Agar gambar terpotong secara proporsional dan memenuhi kotak */
+}
+
+
+/* Menu Styling */
+.nav-menu {
+    display: flex;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.nav-links a {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.nav-links a:hover {
+    background-color: #00bcd4;
+}
+
+/* Section Styling */
+.section {
+    display: none; /* Hide all sections by default */
+    padding: 20px;
+}
+.section.active {
+    display: block; /* Only show the active section */
+}
+/* Contact Us Section Styling */
+#contact {
+    padding: 30px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #00bcd4;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.contact-item.alamat-toko {
+    margin-top: 20px;
+}
+.contact-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-item a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Hover Effect for Contact Items */
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+    .nav-menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+}
